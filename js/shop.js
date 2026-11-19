@@ -12,7 +12,7 @@
     'bluete':{n:'Blütenhonig',l:'Honig',img:'bluetenhonig-glas-imkerei-molitor.jpg',w:622,h:622,p:4.99,ab:1,b:'Blumig und fein, aus Wildblumen und Wiesen rund um die Imkerei.',d:HONIG},
     'heide':{n:'Heidehonig',l:'Honig',img:'heidehonig-glas-imkerei-molitor.jpg',w:622,h:622,p:5.99,ab:1,b:'Cremig und herb, mit dem typischen Aroma der Heideblüte.',d:HONIG2},
     'wald':{n:'Waldhonig',l:'Honig',img:'waldhonig-glas-imkerei-molitor.jpg',w:622,h:622,p:4.99,ab:1,b:'Dunkel und würzig, aus der Waldtracht im Sauerländer Wald.',d:HONIG},
-    'met':{n:'Met – Honigwein',l:'Met',img:'met-honigwein-imkerei-molitor.jpg',w:1254,h:1254,p:14.99,alk:1,b:'Traditioneller Honigwein aus eigenem Honig, kalt oder sanft erwärmt als heißer Met.',d:'750 ml · 11 % vol',x:ALK},
+    'met':{n:'Met – Honigwein',l:'Met',img:'met-honigwein-imkerei-molitor.jpg',w:1254,h:1254,p:10.99,alk:1,b:'Traditioneller Honigwein aus eigenem Honig, kalt oder sanft erwärmt als heißer Met.',d:'750 ml · 11 % vol',x:ALK},
     'zimt':{n:'Zimt Met',l:'Winter-Met-Mix',img:'winter-met-mix-imkerei-molitor.jpg',w:1536,h:1024,p:11.99,alk:1,b:'Unser Honigwein mit Zimt – warm und würzig, besonders gut als heißer Met.',d:'750 ml · 11,5 % vol',x:ALK},
     'bratapfel':{n:'Bratäpfel Met',l:'Winter-Met-Mix',img:'winter-met-mix-imkerei-molitor.jpg',w:1536,h:1024,p:11.99,alk:1,b:'Honigwein mit Apfel und Winterwürze – schmeckt nach Bratapfel aus dem Ofen.',d:'750 ml · 11,5 % vol',x:ALK},
     'vikinger':{n:'Vikinger Blut',l:'Winter-Met-Mix',img:'winter-met-mix-imkerei-molitor.jpg',w:1536,h:1024,p:11.99,alk:1,b:'Roter Honigwein mit Kirsche – fruchtig, kräftig und tiefrot.',d:'750 ml · 11,5 % vol',x:ALK},
