@@ -579,6 +579,9 @@ footer.fuss{background:linear-gradient(rgba(18,16,12,.8),rgba(18,16,12,.88)),url
 /* Hinweis: kein Alkohol unter 18 */
 .alters-hinweis{display:flex;gap:14px;align-items:center;margin:18px 0;padding:14px 18px;border:2px solid var(--gold);border-radius:var(--r);background:rgba(230,180,80,.08)}
 .alters-hinweis p{margin:0;font-size:.95rem}
+.alter-ecke{position:absolute;top:16px;right:16px;z-index:5;display:flex;align-items:center;gap:8px;margin:0;padding:5px 14px 5px 5px;border-radius:999px;background:rgba(18,16,12,.7);border:1px solid rgba(239,228,207,.25);color:var(--ink);font-size:.8rem;font-weight:600;letter-spacing:.02em;backdrop-filter:blur(6px)}
+.alter-ecke-zeichen{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#8e1424;color:#fff;font-size:.72rem;font-weight:700;border:1.5px solid #fff}
+@media (max-width:860px){.alter-ecke{top:10px;right:10px;font-size:.72rem;padding:4px 10px 4px 4px}.alter-ecke-zeichen{width:26px;height:26px;font-size:.66rem}}
 .alters-zeichen{flex:0 0 auto;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:#8e1424;color:#fff;font-weight:700;font-size:1rem;border:2px solid #fff}
 /* Kinderecke: Bereiche öffnen sich über die Karten */
 .kinder-bereich{display:none;scroll-margin-top:90px}
