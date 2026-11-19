@@ -1,0 +1,51 @@
+Neue Website Sauerländer Imkerei Molitor – Aufbau (Stand 13.11.2026)
+=====================================================================
+Grundlage: Brand Kit (Datei 16), Mockup (Datei 18) und Seitenplan (Datei 09).
+Öffnen: index.html im Browser öffnen (kein Server nötig).
+
+Ordner
+------
+index.html                Startseite
+css/style.css             EINE CSS-Datei für alle Seiten (Farben/Schriften oben als Variablen)
+js/main.js                Handy-Menü (alle Seiten)
+js/shop.js                Warenkorb und Kasse (nur E-Shop)
+bilder/                   alle Fotos, Logo und Video
+_bausteine/               gemeinsame Teile:
+   kopf.html              Teil im <head>: Zeichensatz, Viewport, Schriften, CSS, Favicon
+   header.html            Kopfzeile mit Logo, Menü und E-Shop-Knopf
+   footer.html            Fußzeile mit Adresse, Links, Impressum, Datenschutz
+   bauen.ps1              setzt die drei Teile in alle Seiten ein
+honig/ (+ waldhonig, heidehonig, bluetenhonig, lindenhonig)
+met/  bienenwachskerzen/  geschenke/  e-shop/  hofladen/  ueber-uns/
+ratgeber/ (+ heisser-met, met-wikinger, waldhonig-entstehung, honigkerzen-basteln, viking-cake)
+impressum/  datenschutz/
+sitemap.xml  robots.txt    für Google (Domain-Annahme: imkerei-molitor.de)
+
+Header oder Footer ändern
+-------------------------
+1. _bausteine/header.html (oder footer.html, kopf.html) bearbeiten.
+   {{R}} steht für den Weg zurück zum Hauptordner – nicht löschen.
+2. Im Ordner 20_Website_Imkerei_Molitor ausführen:
+   powershell -ExecutionPolicy Bypass -File _bausteine\bauen.ps1
+   Danach haben alle 20 Seiten den neuen Header/Footer.
+Jede Seite hat dafür die Markierungen <!-- HEADER:START --> ... <!-- HEADER:ENDE -->.
+Nicht zwischen diesen Markierungen von Hand schreiben – das wird überschrieben.
+
+Offene Platzhalter (orange auf der Seite)
+-----------------------------------------
+Glasgröße und Preis pro kg · weitere Kerzengrößen · Versandkosten unter 39 € (Annahme 4,90 €)
+Lieferzeit · Zahlungsarten · Anzahl Bienenvölker · Haltbarkeit geöffneter Met
+Impressum, Datenschutz, AGB, Widerruf · Ratgeber-Text „Ist Honig vom Imker gesund?“
+Noch nicht gebaut (Seitenplan Phase 2/3): Honig-Adventskalender, Ist Waldhonig gesund?,
+Wald- oder Blütenhonig?, Was kostet Imkerhonig?, Kerzen-Workshop.
+Bilder sind JPG; der Seitenplan wünscht WebP unter 200 KB – noch umzuwandeln.
+
+Kontaktformular (Netlify Forms)
+-------------------------------
+kontakt/index.html enthält <form name="kontakt" data-netlify="true" netlify-honeypot="bot-feld">.
+Danke-Seite: kontakt/danke/index.html (action="/kontakt/danke/").
+Funktioniert nur, wenn die Website bei Netlify veröffentlicht ist:
+1. Netlify -> Forms -> "Enable form detection"
+2. Website neu veröffentlichen (Deploy)
+3. Forms -> Submission notifications -> E-Mail-Benachrichtigung an imkerei@molitor.de einrichten
+Lokal (file://) wird nichts gesendet.
