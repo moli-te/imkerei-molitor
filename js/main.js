@@ -1,20 +1,4 @@
-/* Sauerländer Imkerei Molitor – Skript für alle Seiten: Hamburger-Menü öffnen und schließen */
-(function () {
-  var knopf = document.querySelector('.burger');
-  var panel = document.getElementById('menuepanel');
-  if (!knopf || !panel) return;
-  function setzen(auf) {
-    panel.hidden = !auf;
-    document.documentElement.classList.toggle('menue-offen', auf);
-    knopf.setAttribute('aria-expanded', auf ? 'true' : 'false');
-    knopf.setAttribute('aria-label', auf ? 'Menü schließen' : 'Menü öffnen');
-  }
-  knopf.addEventListener('click', function () { setzen(knopf.getAttribute('aria-expanded') !== 'true'); });
-  panel.addEventListener('click', function (e) { if (e.target.closest('a') || e.target === panel) setzen(false); });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !panel.hidden) { setzen(false); knopf.focus(); }
-  });
-})();
+/* Sauerländer Imkerei Molitor – Skript für alle Seiten */
 
 /* Video erst laden, wenn die Seite fertig ist und das Video sichtbar wird.
    Bei Datensparmodus oder "weniger Bewegung" bleibt das Vorschaubild stehen. */

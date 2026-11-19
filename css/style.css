@@ -60,39 +60,22 @@ section{padding-block:64px}
 .service{background:var(--forest);font-size:14px}
 .service .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 20px;padding-block:8px}
 header.kopf{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1px solid var(--line)}
-.kopf .wrap{display:flex;align-items:center;gap:32px;padding-block:18px}
-.logo img{height:76px;width:auto;display:block}
-nav.haupt{display:flex;align-items:center;flex-wrap:wrap;gap:4px 28px;margin-left:auto;font-weight:500}
-nav.haupt a{text-decoration:none;padding:6px 0;border-bottom:3px solid transparent}
+/* Schlichtes Menü: immer sichtbar, kein Hamburger */
+.kopf .wrap{display:flex;align-items:center;gap:24px;padding-block:12px}
+.logo{flex:none}
+.logo img{height:64px;width:auto;display:block}
+nav.haupt{display:flex;align-items:center;flex-wrap:wrap;justify-content:flex-end;gap:4px 26px;margin-left:auto;font-size:.95rem;letter-spacing:.02em}
+nav.haupt a{text-decoration:none;color:var(--ink);padding:6px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;white-space:nowrap}
 nav.haupt a:hover{color:var(--gold)}
 nav.haupt a[aria-current="page"]{color:var(--gold);border-bottom-color:var(--gold)}
-.kopf .btn{padding:12px 22px}
-/* Runder Hamburger-Knopf (immer sichtbar) und großes Menü über der Seite */
-.burger{flex:none;width:48px;height:48px;border-radius:50%;border:1px solid rgba(239,228,207,.35);background:rgba(239,228,207,.08);display:grid;place-content:center;gap:5px;cursor:pointer;position:relative;z-index:61;transition:background .2s}
-.burger:hover{background:rgba(230,167,72,.18)}
-.burger span{display:block;width:20px;height:2px;border-radius:2px;background:var(--ink);transition:transform .3s,opacity .3s}
-.menue-offen .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.menue-offen .burger span:nth-child(2){opacity:0}
-.menue-offen .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.menue-offen{overflow:hidden}
-.menue-offen header.kopf{z-index:61}
-.menuepanel{position:fixed;inset:0;z-index:60;background:rgba(18,16,12,.97);padding:170px max(24px,8vw) 48px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:40px;align-content:start;overflow:auto;animation:panelEin .35s ease}
-@keyframes panelEin{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}
-.menuepanel-haupt{display:flex;flex-direction:column;gap:6px}
-.menuepanel-haupt a{font-family:var(--display);font-size:clamp(2.2rem,6vw,4.4rem);line-height:1.1;color:var(--logo-gold);text-decoration:none;transition:color .2s,padding .2s}
-.menuepanel-haupt a:hover{color:var(--ink);padding-left:12px}
-.menuepanel-neben{display:grid;gap:28px;align-content:start;padding-top:12px}
-.menuepanel-neben div{display:flex;flex-direction:column;gap:6px}
-.menuepanel-neben b{font-family:var(--display);color:var(--gold);font-size:1.1rem}
-.menuepanel-neben a,.menuepanel-neben span{color:var(--muted);text-decoration:none}
-.menuepanel-neben a:hover{color:var(--ink)}
+@media (max-width:1020px){nav.haupt{gap:4px 18px;font-size:.9rem}}
 @media (max-width:860px){
-  .kopf .wrap{gap:12px}
-  nav.haupt{display:none}
-  .kopf .btn{margin-left:auto}
-  .menuepanel{grid-template-columns:1fr;padding-top:200px;gap:28px}
+  header.kopf{position:static}
+  .kopf .wrap{flex-direction:column;gap:6px;padding-block:10px}
+  .logo img{height:52px}
+  nav.haupt{width:100%;margin-left:0;justify-content:center;gap:2px 16px}
+  nav.haupt a{padding:6px 2px}
 }
-@media (max-width:480px){.logo img{height:56px}.kopf .btn{padding:.5em .9em;font-size:.9rem}}
 
 /* ---------- 4 Bausteine ---------- */
 .saison{background:var(--forest)}
@@ -530,9 +513,6 @@ footer.fuss{background:linear-gradient(rgba(18,16,12,.8),rgba(18,16,12,.88)),url
 .kontakt-form .check a{color:var(--gold)}
 .kontakt-form button{justify-self:start}
 .nicht-ausfuellen{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
-/* Nur Hamburger-Menü */
-.kopf .btn{margin-left:auto}
-.menuepanel-haupt a[aria-current=page]{color:var(--ink)}
 
 /* Kinderecke */
 .kinder-bald{border-style:dashed}
