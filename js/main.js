@@ -12,6 +12,8 @@
     if (v.dataset.gestartet) return;
     v.dataset.gestartet = '1';
     v.preload = 'auto';
+    var tempo = parseFloat(v.getAttribute('data-tempo'));
+    if (tempo > 0) { v.defaultPlaybackRate = tempo; v.playbackRate = tempo; }
     var p = v.play();
     if (p && p.catch) p.catch(function () {});
   }
