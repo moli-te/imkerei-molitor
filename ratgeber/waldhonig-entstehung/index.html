@@ -36,7 +36,16 @@
     <a class="logo" href="../../index.html"><img src="../../bilder/logo-sauerlaender-imkerei-molitor.png" width="400" height="400" alt="Sauerländer Imkerei Molitor – zur Startseite"></a>
     <nav class="haupt" aria-label="Hauptmenü">
       <a href="../../index.html" data-nav="start">Startseite</a>
-      <a href="../../e-shop/index.html" data-nav="e-shop">E-Shop</a>
+      <div class="nav-gruppe">
+        <a href="../../e-shop/index.html" data-nav="e-shop">E-Shop</a><button class="nav-auf" type="button" aria-expanded="false" aria-controls="untermenue-shop" aria-label="Produkte im E-Shop anzeigen"><span aria-hidden="true">▾</span></button>
+        <div class="untermenue" id="untermenue-shop">
+          <a href="../../e-shop/index.html#honig">Honig</a>
+          <a href="../../e-shop/index.html#met">Met</a>
+          <a href="../../e-shop/index.html#winter-met-mix">Winter-Met-Mix</a>
+          <a href="../../e-shop/index.html#kerzen">Bienenwachskerzen</a>
+          <a href="../../e-shop/index.html#geschenke">Geschenksets</a>
+        </div>
+      </div>
       <a href="../../ueber-uns/index.html" data-nav="ueber-uns">Über uns</a>
       <a href="../../hofladen/index.html" data-nav="hofladen">Hofladen</a>
       <a href="../../ratgeber/index.html" data-nav="ratgeber" aria-current="page">Ratgeber</a>

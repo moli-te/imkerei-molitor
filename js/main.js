@@ -27,3 +27,16 @@
     });
   });
 })();
+
+/* Untermenü „E-Shop“: per Tippen auf ▾ öffnen und schließen */
+(function () {
+  document.querySelectorAll('.nav-gruppe').forEach(function (g) {
+    var knopf = g.querySelector('.nav-auf');
+    if (!knopf) return;
+    function setzen(auf) { g.classList.toggle('offen', auf); knopf.setAttribute('aria-expanded', auf ? 'true' : 'false'); }
+    knopf.addEventListener('click', function (e) { e.stopPropagation(); setzen(!g.classList.contains('offen')); });
+    document.addEventListener('click', function (e) { if (!g.contains(e.target)) setzen(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && g.classList.contains('offen')) { setzen(false); knopf.focus(); } });
+    g.querySelectorAll('.untermenue a').forEach(function (a) { a.addEventListener('click', function () { setzen(false); }); });
+  });
+})();
